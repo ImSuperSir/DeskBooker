@@ -1,4 +1,5 @@
-﻿namespace DeskBooker.Core.Processor
+﻿namespace DeskBooker.Core.Domain
+
 {
     public class DeskBookingResult
     {
