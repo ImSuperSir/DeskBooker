@@ -33,5 +33,15 @@ namespace DeskBooker.Core.Processor
             Assert.Equal(request.Date, result.Date);
 
         }
+
+        [Fact]
+        public void ShouldThrowExceptionIfRequestIsNull()
+        { 
+            var processor = new DeskBookingRequestProcessor();
+
+            var exception = Assert.Throws<ArgumentNullException>(() => processor.BookDesk(null));
+
+            Assert.Equal("request", exception.ParamName);
+        }
     }
 }
